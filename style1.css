@@ -1,98 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+.products .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-.container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.products .box-container .box {
+  flex: 1 1 30rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.products .box-container .box .discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.7rem 1rem;
+  font-size: 2rem;
+  color: var(--pink);
+  background: rgba(255, 51, 153, 0.05);
+  z-index: 1;
+  border-radius: 0.5rem;
+}
+
+.products .box-container .box .image,
+video {
+  position: relative;
   text-align: center;
-  margin: 40px 20px 0 20px;
+  padding-top: 2rem;
+  overflow: hidden;
 }
 
-.container .heading{
-  width: 50%;
-  padding-bottom: 50px;
-}
-.container .heading h3{
-  font-size: 3em;
-  font-weight: bolder;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #222;
+.products .box-container .box .image img,
+video {
+  height: 25rem;
 }
 
-.container .heading h3 span{
-  font-weight: 100;
-}
-.container .box{
- display: flex;
- flex-direction: row;
- justify-content: space-between;
+.products .box-container .box:hover .image img,
+video {
+  transform: scale(1.1);
 }
 
-.container .box .dream{
+.products .box-container .box .image .icons {
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-direction: column;
-  width: 32.5%;
 }
 
-.container .box .dream img{
+.products .box-container .box:hover .image .icons {
+  bottom: 0;
+}
+
+.products .box-container .box .image .icons a {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  width: 50%;
+  background: var(--pink);
+  color: #fff;
+}
+
+.products .box-container .box .image .icons .cart-btn {
+  border-left: 0.1rem solid #fff7;
+  border-right: 0.1rem solid #fff7;
   width: 100%;
-  padding-bottom: 15px;
-  border-radius: 5px;
 }
 
-.container .btn{
-  margin: 40px 0 70px 0;
-  background: #222;
-  padding: 15px 40px ;
-  border-radius: 5px;
+.products .box-container .box .image .icons a:hover {
+  background: #333;
 }
 
-.container .btn a{
- color: #fff;
- font-size: 1.2em;
- text-decoration: none;
- font-weight: bolder;
- letter-spacing: 3px;
+.products .box-container .box .content {
+  padding: 2rem;
+  text-align: center;
 }
-.btn:hover ,a:hover{
-  background-color: green;
+
+.products .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: rgb(62, 62, 243);
+}
+
+.products .box-container .box .content .price {
+  font-size: 2.5rem;
+  color: var(--pink);
+  font-weight: bolder;
+  padding-top: 1rem;
+}
+
+.products .box-container .box .content .price span {
+  font-size: 1.5rem;
+  color: #999;
+  font-weight: lighter;
+  text-decoration: line-through;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bolder;
+  text-shadow: 1px 1px 8px blue;
+  animation-name: logo1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+}
+footer {
+  display: block;
+  padding: 20px;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: aqua;
+  border: 2px solid red;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  
+}
+footer a{
+  font-size: 24px;
 }
 
 
-@media only screen and (max-width: 769px){
-    .container .box{
-   flex-direction: column;
+ footer:hover{
+  background-color: red;
+  font-size: 25px;
+}
+@media all and (max-width: 480px) {
+  img {
+    height: 291px;
+    width: 300px;
   }
-
-.container .box .dream{
-  width: 100%;
-}
-
-
-
-
-
-}
-
-@media only screen and (max-width: 643px){
-.container .heading{
-  width: 100%;
-}
-.container .heading h3{
-  font-size: 1em;
-
-}
-
-
-
-
+  video {
+    width: 300px;
+    height: 300px;
+  }
+  footer{
+    width: 700px;
+  }
+  footer a{
+    font-size: 100px;
+  }
 
 }
