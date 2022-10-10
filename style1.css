@@ -1,7 +1,7 @@
 .products .box-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: .5rem;
 }
 
 .products .box-container .box {
@@ -34,7 +34,7 @@ video {
 
 .products .box-container .box .image img,
 video {
-  height: 25rem;
+  height: 30rem;
 }
 
 .products .box-container .box:hover .image img,
@@ -151,4 +151,7 @@ footer a{
     font-size: 100px;
   }
 
+
 }
+
+  
